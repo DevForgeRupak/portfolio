@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupak's Portfolio</title>
+</head>
+    <link rel="stylesheet" href="achievement.css">
+<body>
+    
+    <header>
+        <h1>Rupak</h1>
+        <p>⚙️ Full Stack Developer | 🎨 UI/UX Designer | 🛠️ Quality Assurance Tester</p>
+    </header>
+    <button class="theme-switch" onclick="toggleTheme()">Toggle Theme</button>
+    <div class="container">
+        <div class="character" id="character"></div>
+        <section class="about">
+            <h2>🏭 About Me</h2>
+            <p>I am a Full Stack Developer with expertise in HTML, CSS, JavaScript, React, Node.js, and MySQL. Additionally, I have a passion for UI/UX design and Quality Assurance Testing. Currently pursuing a Bachelor of Computer Application (BCA), I aim to build engaging, user-friendly digital experiences.</p>
+        </section>
+
+        <div class="conveyor">
+            <div class="parcel">Hey</div>
+        </div>
+
+        <section class="skills">
+            <h2>🔧 Skills</h2>
+            <ul>
+                <li>⚡ HTML</li>
+                <li>🎨 CSS</li>
+                <li>🖥️ JavaScript</li>
+                <li>🔩 React</li>
+                <li>🚀 Node.js</li>
+                <li>💾 MySQL</li>
+                <li>🎭 UI/UX Design</li>
+                <li>🔍 Quality Assurance Testing</li>
+            </ul>
+        </section>
+        <section class="projects">
+            <h2>🏗️ Projects</h2>
+            <p>Here are some projects I have worked on:</p>
+            <ul>
+                <li>⚙️ Portfolio Website</li>
+                <li>🛒 E-commerce Web App</li>
+                <li>📊 Data Visualization Dashboard</li>
+                <li>🔍 Bug Tracking System</li>
+            </ul>
+        </section>
+        <section class="contact">
+            <h2>📞 Contact</h2>
+            <p>Email: patrarupak43@gmail.com</p>
+        </section>
+    </div>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+        });
+        function revealSections() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight * 0.85) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealSections);
+        revealSections();
+        const character = document.getElementById("character");
+        document.addEventListener("mousemove", (e) => {
+            character.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+    </script>
+</body>
+</html>
