@@ -17,6 +17,8 @@ body {
 }
 .left-section {
     width: 50%;
+        display: flex;
+    flex-wrap:wrap;
 }
 .left-section h1 {
     font-size: 3em;
