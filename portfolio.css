@@ -9,90 +9,101 @@ body {
     color: white;
 }
 .container {
-            display: flex;
-            height: 100vh;
-            padding: 50px;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        .left-section {
-            width: 50%;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .left-section h1 {
-            font-size: 3rem;
-        }
-        .left-section span {
-            color: #00ff99;
-        }
-        .left-section p {
-            margin: 20px 0;
-            font-size: 1.2em;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        .btn {
-            padding: 10px 20px;
-            background: #00ff99;
-            color: black;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 5px;
-            margin: 5px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #00cc77;
-        }
-        .right-section {
-            width: 50%;
-            position: relative;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 20px;
-        }
-        .right-section img {
-            float: left;
-            margin-right: 10px;
-            width: 100%;
-            max-width: 200px;
-            border-radius: 20px;
-            border: 5px solid #00ff99;
-        }
-        .aboutme {
-            text-align: center;
-            margin: 10px;
-            color: #00ff99;
-            font-size: 1.2em;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                text-align: center;
-                height: auto;
-                padding: 20px;
-            }
-            .left-section, .right-section {
-                width: 100%;
-            }
-            .left-section h1 {
-                font-size: 2rem;
-            }
-            .aboutme {
-                text-align:center;
-                text-align: 1vw;
-                margin: 10px;
-                color: #00ff99;
-                font-size: 3vw;
-            }
-            }
-        
+    display: flex;
+    min-height: 100vh;
+    padding: 50px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.left-section {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.left-section h1 {
+    font-size: 3rem;
+}
+.left-section span {
+    color: #00ff99;
+}
+.left-section p {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+.buttons {
+    margin-top: 20px;
+}
+.btn {
+    padding: 10px 20px;
+    background: #00ff99;
+    color: black;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #00cc77;
+}
+.right-section {
+    width: 20%;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+}
+.right-section img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 20px;
+    border: 5px solid #00ff99;
+}
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    .left-section, .right-section {
+        width: 100%;
+        text-align: center;
+    }
+    .left-section h1 {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .left-section h1 {
+        font-size: 2rem;
+    }
+    .btn {
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+    .left-section h1 {
+        font-size: 1.8rem;
+    }
+    .left-section p {
+        font-size: 1em;
+    }
+    .right-section img {
+        max-width: 180px;
+    }
+}
